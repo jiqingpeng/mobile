@@ -1,0 +1,426 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0" />
+<title>无标题文档</title>
+<script>
+	(function(win,doc){
+		function change(){
+			doc.documentElement.style.fontSize=doc.documentElement.clientWidth*20/320+'px';	
+		}
+		change();
+		win.addEventListener('resize',change,false);	
+	})(window,document)
+</script>
+<style>
+	*{ padding:0; margin:0; list-style:none;font-family:'微软雅黑';}
+  .clearfix:after{display:block; content:''; clear:both;}
+  .fl{float:left;}
+  .fr{float:right;}
+	img{ width:100%; vertical-align:top;}
+	.head{ width:16rem; height:2.5rem; background:-webkit-linear-gradient(#FFF,#ebebeb); padding-top:0.75rem; box-sizing:border-box; position:relative;}
+	h1{ width:3.7rem; height:1rem; background:url(img/logo.png) no-repeat; background-size:100%; margin:0 auto;}
+	.head a{ position:absolute; top:0.5rem; left:0.5rem; width:3.175rem; height:1.55rem; background:url(img/backBtn.png); background-size:100%; text-indent:-999em;}
+  .outerbox{ width:100%; overflow:hidden; display:block;}
+  #banner{ width:500%; overflow:hidden; -webkit-transform:translate3d(-16rem,0,0);}
+  #banner li{ float:left; width:calc(100%/5);}
+  img{ width:100%;}
+	/* .picbox ul{ display:-webkit-box; -webkit-box-pack:center; -webkit-box-align:center; margin-top:0.5rem;}
+	.picbox li{ width:0.25rem; height:0.25rem; background:#666; border-radius:50%; 
+	margin-right:0.25rem;}
+	.active{ background:#F40 !important;} */
+	.icon{ width:2rem; height:2rem; background-size:100%; display:inline-block; margin-bottom:0.4rem; vertical-align:top;background-repeat:no-repeat;}
+	.icon1{ background-image:url(img/icon1.png); }
+	.icon2{ background-image:url(img/icon2.png);}
+	.icon3{ background-image:url(img/icon3.png);}
+	.icon4{ background-image:url(img/icon4.png);}
+	.menu{ margin:0 0.4rem; overflow: hidden;}
+	.menu p{ font-size:0.6rem;}
+	.menu a{ color:#999999; text-decoration:none;}
+	
+	.menu li{ width:25%; float:left; text-align:center; margin-top:1rem;}
+	
+	.wrap{width:100%;overflow:hidden;}
+    .content{width:15rem; margin:0 auto;}
+    .rank{width:100%; margin-top:0.9rem;}
+    .tit{width:100%;height:2rem;border-bottom:4px solid #ccc;overflow: hidden;border:1px solid red; line-height: 2rem;}
+    .tit h2{float:left;height:0.65rem;margin-left:0.75rem;border-left:4px solid red;font-size:0.65rem; margin-top:0.6rem; line-height: 0.65rem}
+    .tit span{float:right;}
+    .rank ol{width:100%; }
+    .rank ol li{width:100%; height:3rem; margin-bottom:0.5rem; box-sizing: border-box;}
+    .rank ol li:nth-child(1){margin-top:0.75rem;}
+    .rank ol li .number{float:left;width:1.5rem;height:3rem;line-height:3rem;text-align:center;display:block;background:#ffb400;font-size:1rem;color:#fff;}
+    .rank ol li:nth-child(1) .number{background:#e00202;}
+    .rank ol li:nth-child(2) .number{background:#ff4800;}
+    .rank ol li:nth-child(3) .number{background:#ff7300;}
+    
+    .rank ol li .price{width:8.75rem;height:100%;background:#f4f4f4 url(img/point.png) center right no-repeat;color:#999999;font-size:0.575rem;}
+    .rank ol li .price .pl{height:3rem;line-height:3rem;margin-left:0.5rem;margin-top:0.75rem;}
+    .rank ol li .price .pl .line{text-decoration:line-through;}
+    .rank ol li .price .pl .col{color:red;}
+    .rank ol li .price .pl p{height:0.85rem;line-height:0.85rem;}
+    .rank ol li .price .pr{height:3rem;line-height: 3rem;font-size:0.625rem;color:red;margin-right:1.1rem;font-weight: blod;}
+    .rank ol li img{float:left; width:4.575rem; height:100%;}
+    
+    .brand{width:100%; margin-bottom:0.5rem;}
+    .brand h2{width:100%;height:2rem; line-height:2rem;font-size:0.65rem; text-align: center;background:#ccc; margin-bottom: 0.5rem}
+    .brand .slide{width:15rem;height:8.8rem;border-bottom:1px solid #ccc;box-sizing: border-box;}
+    .slide img{width:3.75rem;height:100%;float:left;}
+    .slide ul{width:11.25rem;height:100%;float:left;box-sizing: border-box;border-bottom: 1px solid #eeeeee; }
+    .slide ul li{float:left;width:calc(100%/3);height:2.15rem;box-sizing: border-box;border-top:1px solid #eeeeee;border-right:1px solid #eeeeee;}
+    .slide ul li a{display:block;width:100%;height:2.15rem; line-height:2.15rem;text-align: center;text-decoration: none;color:#b4b4b4; font-size:0.65rem;}
+    .last{height:2rem; line-height:2rem;font-size:0.65rem; text-align: center;background:#ccc; margin-bottom: 0.5rem;font-weight:bold;}
+    .lastcol{width:15rem;height:4rem;}
+    .lastcol div{width:calc(100%/3); height:1.25rem;font-size:0.6rem;color:#fff;text-align: center;padding-top:2.75rem;}
+    .lastcol .it1{background:#38a4f1 url(img/appen1.png) no-repeat center 0.7rem;}
+    .lastcol .it2{background:#8bca11 url(img/mobile.png) no-repeat center 0.7rem;}
+    .lastcol .it3{background:#ff7404 url(img/weixin.png) no-repeat center 0.7rem;}
+    .last2{width:100%;height:100%;color:#000;font-weight:bold;margin-top:1.25rem;}
+    .last2 li:nth-child(2){margin-left:0.75rem;}
+    .last2 li:nth-child(3){background:url(img/point1.png) no-repeat center right;padding-right:0.75rem;}
+    .footer{width:100%;height:3.75rem;background:#ccc;margin-top:0.75rem;border:1px solid #ccc;}
+    .footer p{width:100%;text-align:center;}
+    .footer p:nth-child(1){height:0.65rem;margin-top:1rem;}
+    .footer p:nth-child(2){height:0.5rem;font-size:0.5rem;margin-top:0.75rem;}
+</style>
+<script>
+ 
+  //好消息：window.onload 性能比较差
+  //window.onload=function(){};
+  document.addEventListener('DOMContentLoaded',function(){
+    
+    var oUl=document.querySelector('#banner');
+    var aLi=oUl.children;
+    var iNow=1;
+    var bReady=true;
+    
+    var x=-aLi[0].offsetWidth;
+    oUl.addEventListener('touchstart',function(ev){
+      if(!bReady)return;
+      bReady=false;
+      
+      oUl.style.WebkitTransition='none';
+      var downX=ev.targetTouches[0].clientX;
+      var disX=downX-x;
+      document.addEventListener('touchmove',fnMove,false);
+      document.addEventListener('touchend',fnEnd,false);
+      function fnMove(ev){
+        x=ev.targetTouches[0].clientX-disX;
+        oUl.style.WebkitTransform='translate3d('+x+'px,0,0)'; 
+      }
+      
+      function fnEnd(ev){
+        oUl.style.WebkitTransition='0.3s';
+        document.removeEventListener('touchmove',fnMove,false);
+        document.removeEventListener('touchend',fnEnd,false); 
+        
+        var upX=ev.changedTouches[0].clientX;
+        
+        var cw=Math.abs(upX-downX);
+        
+        //走ul 是否切换
+        if(cw>50){
+          
+          if(downX>upX){
+            //左
+            iNow++;
+          }else{
+            //右
+            iNow--; 
+          }
+          x=-iNow*aLi[0].offsetWidth;
+          console.log(x);
+          oUl.style.WebkitTransform='translate3d('+x+'px,0,0)'; 
+        }else{
+          x=-iNow*aLi[0].offsetWidth;
+          oUl.style.WebkitTransform='translate3d('+x+'px,0,0)'; 
+        }
+        
+      }
+      ev.preventDefault();  
+    },false);
+    
+    
+    //运动完毕事件
+    oUl.addEventListener('transitionend',function(){
+      bReady=true;
+      if(iNow==aLi.length-1){
+        //alert('完毕');
+        oUl.style.WebkitTransition='none';
+        iNow=1;
+        x=-iNow*aLi[0].offsetWidth;
+        oUl.style.WebkitTransform='translate3d('+x+'px,0,0)'; 
+      }
+      
+      if(iNow==0){
+        //alert('完毕');
+        oUl.style.WebkitTransition='none';
+        iNow=aLi.length-2;
+        x=-iNow*aLi[0].offsetWidth;
+        oUl.style.WebkitTransform='translate3d('+x+'px,0,0)'; 
+      }
+      
+    },false);
+  },false);
+</script>
+</head>
+
+<body>
+	<div class="wrap">
+    	<header class="head">
+            <a href="#">返回</a>
+            <h1></h1>
+        </header>
+        <div class="outbox">
+          <ul class='clearfix' id='banner'>
+            <li><img src="img/3.jpg" alt=""></li>
+            <li><img src="img/1.jpg" alt=""></li>
+            <li><img src="img/2.jpg" alt=""></li>
+            <li><img src="img/3.jpg" alt=""></li>
+            <li><img src="img/1.jpg" alt=""></li>
+          </ul>
+    		</div>
+        <ul class="menu">
+            <li>
+                <a href="#" class="icon icon1"></a>
+                <p><a href="#">商品</a></p>
+            </li>
+            <li>
+                <a href="#" class="icon icon2"></a>
+                <p><a href="#">商品</a></p>
+            </li>
+            <li>
+                <a href="#" class="icon icon3"></a>
+                <p><a href="#">聚宝盆</a></p>
+            </li>
+            <li>
+                <a href="#" class="icon icon4"></a>
+                <p><a href="#">商品</a></p>
+            </li>
+            <li>
+                <a href="#" class="icon icon1"></a>
+                <p><a href="#">商品</a></p>
+            </li>
+            <li>
+                <a href="#" class="icon icon2"></a>
+                <p><a href="#">商品</a></p>
+            </li>
+            <li>
+                <a href="#" class="icon icon3"></a>
+                <p><a href="#">聚宝盆</a></p>
+            </li>
+            <li>
+                <a href="#" class="icon icon4"></a>
+                <p><a href="#">商品</a></p>
+            </li>
+        </ul>
+        <div class='content'>
+            <div class='rank'>
+                <div class='tit tit1'>
+                    <h2>聚划算热卖排行</h2>
+                    <span>TOP10</span>
+                </div>
+                <ol>
+                    <li class='clearfix'>
+                      <span class='number'>1</span>
+                      <img src="img/ol1.png" alt="">
+                      <div class='fl price'>
+                        <div class='fl pl'>
+                          <p>已售48623</p>
+                          <p><span class='col'>2.3</span>折 ￥<span class='line'>299</span></p>
+                        </div>
+                        <div class='fr pr'>￥51</div>
+                      </div>
+                    </li>
+                    <li class='clearfix'>
+                      <span class='number'>2</span>
+                      <img src="img/ol2.png" alt="">
+                      <div class='fl price'>
+                        <div class='fl pl'>
+                          <p>已售48623</p>
+                          <p><span class='col'>2.3</span>折 ￥<span>299</span></p>
+                        </div>
+                        <div class='fr pr'>￥4599</div>
+                      </div>
+                    </li>
+                    <li class='clearfix'>
+                      <span class='number'>3</span>
+                      <img src="img/ol3.png" alt="">
+                      <div class='fl price'>
+                        <div class='fl pl'>
+                          <p>已售48623</p>
+                          <p><span class='col'>2.3</span>折 ￥<span>299</span></p>
+                        </div>
+                        <div class='fr pr'>￥4599</div>
+                      </div>
+                    </li>
+                    <li class='clearfix'>
+                      <span class='number'>4</span>
+                      <img src="img/ol4.png" alt="">
+                      <div class='fl price'>
+                        <div class='fl pl'>
+                          <p>已售48623</p>
+                          <p><span class='col'>2.3</span>折 ￥<span>299</span></p>
+                        </div>
+                        <div class='fr pr'>￥4599</div>
+                      </div>
+                    </li>
+                    <li class='clearfix'>
+                      <span class='number'>5</span>
+                      <img src="img/ol5.png" alt="">
+                      <div class='fl price'>
+                        <div class='fl pl'>
+                          <p>已售48623</p>
+                          <p><span class='col'>2.3</span>折 ￥<span>299</span></p>
+                        </div>
+                        <div class='fr pr'>￥4599</div>
+                      </div>
+                    </li>
+                    <li class='clearfix'>
+                      <span class='number'>6</span>
+                      <img src="img/ol6.png" alt="">
+                      <div class='fl price'>
+                        <div class='fl pl'>
+                          <p>已售48623</p>
+                          <p><span class='col'>2.3</span>折 ￥<span>299</span></p>
+                        </div>
+                        <div class='fr pr'>￥4599</div>
+                      </div>
+                    </li>
+                    <li class='clearfix'>
+                      <span class='number'>7</span>
+                      <img src="img/ol7.png" alt="">
+                      <div class='fl price'>
+                        <div class='fl pl'>
+                          <p>已售48623</p>
+                          <p><span class='col'>2.3</span>折 ￥<span>299</span></p>
+                        </div>
+                        <div class='fr pr'>￥4599</div>
+                      </div>
+                    </li>
+                    <li class='clearfix'>
+                      <span class='number'>8</span>
+                      <img src="img/ol8.png" alt="">
+                      <div class='fl price'>
+                        <div class='fl pl'>
+                          <p>已售48623</p>
+                          <p><span class='col'>2.3</span>折 ￥<span>299</span></p>
+                        </div>
+                        <div class='fr pr'>￥4599</div>
+                      </div>
+                    </li>
+                    <li class='clearfix'>
+                      <span class='number'>9</span>
+                      <img src="img/ol9.png" alt="">
+                      <div class='fl price'>
+                        <div class='fl pl'>
+                          <p>已售48623</p>
+                          <p><span class='col'>2.3</span>折 ￥<span>299</span></p>
+                        </div>
+                        <div class='fr pr'>￥4599</div>
+                      </div>
+                    </li>
+                    <li class='clearfix'>
+                      <span class='number'>10</span>
+                      <img src="img/ol10.png" alt="">
+                      <div class='fl price'>
+                        <div class='fl pl'>
+                          <p>已售48623</p>
+                          <p><span class='col'>2.3</span>折 ￥<span>299</span></p>
+                        </div>
+                        <div class='fr pr'>￥4599</div>
+                      </div>
+                    </li>
+                </ol>
+            </div>
+            <div class='brand'>
+              <h2>更多划算 逛起来</h2>
+              <div class='slide'>
+                  <img src="img/pict1.png" alt="">
+                  <ul>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                  </ul>
+              </div>  
+            </div>
+            <div class='brand'>
+              <h2>更多划算 逛起来</h2>
+              <div class='slide'>
+                  <img src="img/pict2.png" alt="">
+                  <ul>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">生活服务</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#"></a></li>
+                      <li><a href="#"></a></li>
+                  </ul>
+              </div>  
+            </div>
+            <div class='brand'>
+              <h2>更多划算 逛起来</h2>
+              <div class='slide'>
+                  <img src="img/pict3.png" alt="">
+                  <ul>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">生活服务</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#">美食</a></li>
+                      <li><a href="#"></a></li>
+                      <li><a href="#"></a></li>
+                  </ul>
+              </div>  
+            </div>
+            <div class='last'>品牌折扣 逛起来！</div>
+            <div class='lastcol'>
+              <div class='fl it1'>ios客户端</div>
+              <div class='fl it2'>安卓客户端</div>
+              <div class='fl it3'>意见反馈</div>
+            </div>
+            <ul class='last2 clearfix'>
+              <li class='fl'>登录</li>
+              <li class='fl'>注册</li>
+              <li class='fr'>TOP</li>
+            </ul>
+        </div>
+        <div class='footer'>
+            <p>标准版 电脑版</p>
+            <p>©2013浙B2-20080224 服务中心</p>
+        </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

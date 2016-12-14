@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,maximum-scale=1.0" />
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			padding:0;
+			margin: 0;
+			list-style: none;
+		}
+		img{vertical-align: top;width:100%;}
+		.clearfix:after{display:block; content:''; clear:both;}
+		.clearfix{zoom:1;}
+		/* css头 */
+		*{ padding:0; margin:0; list-style:none;}
+		header{ width:16rem; height:3rem; background:#344a61;}
+		header a{width:3rem; height:3rem;  display:block; }
+		header a:nth-child(1){background:url(img/logo.jpg) no-repeat center; background-size:0.75rem 0.5rem; position:absolute; top:0; left:0;}
+		header a:nth-child(3){background:url(img/email.jpg) no-repeat center; background-size:0.95rem 0.6rem;  position:absolute; top:0; right:0; }
+		h1{ color:#FFF; text-align:center; line-height:3rem; margin:0 3rem; background:#344a61;}
+		 /* css主体 */
+		 
+	
+		.content{
+			width: 14rem;margin: 0 auto;
+		}
+		h2{
+			width: 14rem;
+			height: 2.2rem;
+			line-height: 2.2rem;
+			margin: 0 auto;
+			border-bottom:1px solid #ccc ;
+			font-size: 0.7rem;
+			color: #e3e3e3;
+		}
+		.content img{ width:100%; margin-top:0.85rem;}
+		.content .cont1{width:100%; height:7.4rem; border-bottom:2px solid #ccc;}
+		.content .cont1 h3{width:100%;height:2.25rem;line-height:2.25rem;font-size:0.85rem; color:#000;}
+		.content .cont1 p{width:100%;font-size:0.6rem;color:#686868;/* line-height:0.65rem; */}
+		.content .cont2{width:100%;height:11rem;border-bottom:2px solid #ccc; position:relative;}
+		.content .cont2 .lc2{ width:4rem;position:absolute;left:0;top:0;}
+		.content .cont2 .lc2 img{width:4rem; height:4rem;}
+		.content .cont2 .rc2{position:absolute;right:0;top:1rem;width:8.85rem;}
+		.content .cont2 .rc2 h3{font-size:0.85rem; color:#000;}
+		.content .cont2 .rc2 p{font-size:0.6rem;color:#686868;line-height: 1.05rem;}
+		.content .cont3{width:100%;height:15.75rem;border-bottom:2px solid #ccc;}
+		.content .cont3 h3{font-size:0.85rem; color:#000;height:2.25rem; line-height: 2.25rem;}
+		
+		.content .cont3 p{font-size:0.6rem;color:#686868;line-height: 1.05rem;}
+		.content .cont3 ul{width:100%; box-sizing: border-box; }
+		.content .cont3 ul li{float:left;width:4rem; height:4rem;margin-right:1rem;margin-top:1rem;}
+		.content .cont3 ul li:nth-child(3n){margin-right:0;}
+		.content .cont3 img{margin-top:0;}
+		.content .cont4{width:100%; height:11.5rem; border-bottom:2px solid #ccc;}
+		.content .cont4 h3{font-size:0.85rem; color:#000;height:2.25rem; line-height: 2.25rem;}
+		.content .cont4 p{font-size:0.6rem;color:#686868;line-height: 1.05rem;}
+		.content .cont4 .c4l{width:100%; height:4.15rem;margin-top:0.85rem;}
+		.content .cont4 .c4l img{width:4.15rem;height:4.15rem; float:left;margin-top:0;}
+		.content .cont4 .c4r{ width:8rem;float:left;font-size:0.6rem;margin-left:1rem; box-sizing: border-box;line-height: 1.05rem;}
+		.content .cont5{width:100%;border-bottom:2px solid #ccc;}
+		.content .cont5 h3{font-size:0.85rem; color:#000;height:2.25rem; line-height: 2.25rem; width:100%; text-align: center;}
+		.content .cont5 p{font-size:0.6rem; color:#686868; line-height: 1.05rem; width:100%; text-align: center;}
+		.content .cont5 ul{width:9.75rem;margin:1rem auto;}
+		.content .cont5 ul li{float:left; margin-left:1rem;}
+		.content .cont5 ul li:nth-child(1){ margin-left:0;}
+
+		.content .cont5 ul li img{width:2.5rem;height:2.5rem;margin-top:0;}
+		.content .cont6{width:100%; margin:1rem auto;}
+		.content .cont6 p{font-size:0.6rem; color:#686868; line-height: 1.05rem; width:100%; text-align: center;}
+		footer{width:100%;height:3rem;background:#000;}
+		footer ul li{width:1rem;height:1rem; float:left;margin:0.5rem;}
+		footer ul li:nth-child(1){background-image: url(img/color1.png)}
+		footer ul li:nth-child(2){background-image: url(img/clolr2.png)}
+		footer ul li:nth-child(3){background-color: #2780b8;}
+		footer ul li:nth-child(4){background-color: #25ad61;}
+		footer ul li:nth-child(5){background-color: #e67d21;}
+		footer ul li:nth-child(6){background-color: #8d44ad;}
+		footer ul li:nth-child(7){background-color: #c2382b;}
+		footer ul li:nth-child(8){background-color: #808c8c;}
+		footer P{color:#6b6b6b;font-size:0.6rem;width:100%; text-align: center;margin-top:0.5rem;}
+	</style>
+	<script>
+		(function(win,doc){
+		win.addEventListener('resize',change,false);
+		change();
+		function change(){
+			doc.documentElement.style.fontSize=20/320*doc.documentElement.clientWidth+'px';	
+		}	
+	})(window,document);
+	</script>
+</head>
+<body>
+<!-- 	网页头部
+ -->	<header>
+    	<a href="#"></a>
+        <h1>HEXAGONE</h1>
+        <a href="#"></a>
+    </header>
+    
+<!-- 	网页主体
+ -->	
+ 	<div class='content'>
+		<h2>HOMEPAGE</h2>
+		<img src="img/bg.jpg" />
+		<div class='cont1'>
+        	<h3>WELL,HELLOW THERE!</h3>
+            <p>Honeyconmb provides a unique design and a flat interface to make it stand out from the crowd! The nav is swipable, by dragging any part of the page to right! Check it out yourself!</p>
+	    </div>
+	    <div class='cont2'>
+	    	<div class='lc2'>
+	    		<img src="img/2-1.png" alt="">
+	    		<img src="img/2-2.png" alt="">
+	    	</div>
+	    	<div class='rc2'>
+	    		<div>
+	    			<h3>EASY TO USE</h3>
+	    			<p>The  no point to compuint your left  are first that areeasy we are femalete to use  and custelat!</p>
+	    		</div>
+	    		<div>
+	    			<h3>BULIT WITH CARE</h3>
+	    			<p>no point to compuint your left We re first that  we are femalete to use  and custelat!</p>
+	    		</div>
+	    	</div>
+	    </div>
+	    <div class='cont3'>
+	    	<h3>SOME OF OUR WORKS!</h3>
+	    	<p>no point to compuint your left We re first that  we are femalete to use</p>
+	    	<ul class='clearfix'>
+	    		<li><img src="img/3_03.png" alt=""></li>
+	    		<li><img src="img/3_03.png" alt=""></li>
+	    		<li><img src="img/3_03.png" alt=""></li>
+				<li><img src="img/3_03.png" alt=""></li>
+	    		<li><img src="img/3_03.png" alt=""></li>
+	    		<li><img src="img/3_03.png" alt=""></li>
+
+	    	</ul>
+	    </div>
+	    <div class='cont4'>
+	    	<h3>TESTIMONIALS</h3>
+	    	<p>first that areeasy we are femalete to use  and  are femalete to use  we are femalete to use  and and custelat!</p>
+	    	<div class='c4l clearfix'>
+	    		<img src="img/per.png" alt="">
+	    		<div class=c4r>
+		    		<p>
+					first that areeasy we are femalete to use  and  are femalete to use  we are femalete to use
+		    		</p>
+		    		<span>JOhn Doe-AnnOynmus Buyer</span>
+	    		</div>
+	    	</div>
+	    </div>
+	    <div class='cont5'>
+	    	<h3>GET SCOLIAL WITH US!</h3>
+	    	<p>no point to compuint your left We re first that  we are femalete to use</p>
+	    	<p></p>
+	    	<ul class='clearfix'>
+	    		<li><img src="img/f1.png" alt=""></li>
+	    		<li><img src="img/g.png" alt=""></li>
+	    		<li><img src="img/fg.png" alt=""></li>
+	    	</ul>
+	    </div>
+	    <div class='cont6'>
+	    	<p>COPYRIGHT2013</p>
+	    	<p>ALL RIGTH RESERVED</p>
+	    </div>
+	    
+		
+	</div>
+	<footer>
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<p>TAP THE CONS TO CHANGE THE MENU STYLE!</p>
+	</footer>
+</body>
+</html>
